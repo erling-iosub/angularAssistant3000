@@ -2,7 +2,7 @@
 
 <html ng-app="assistant">
 
-<head >
+<head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>AngularJS Spa Framework</title>
 
@@ -13,25 +13,38 @@
   <link href="app.css" rel="stylesheet">
   <link href="/ext-modules/myframeWork/myframeWork.css" rel="stylesheet">
   <link href="/ext-modules/myframeMenu/myframeMenu.css" rel="stylesheet">
+  <link href="/ext-modules/myframeDashboard/myframeDashboard.css" rel="stylesheet">
 </head>
 
 <body class="container-fluid" ng-controller="assistantCtrl">
 
   <!--custom directive for framework-->
-  <myframe-work-directive title="The Assistant" subtitle="3000" icon-file="images/robot_logo.png">
 
-    <myframe-menu-directive>
+  <myframe-work-dir title="The Assistant" subtitle="3000" icon-file="images/robot_logo.png">
+    <div class="row">
 
-      <myframe-menu-item-directive label="Home"     icon="fa-home"     route="Home Page"></myframe-menu-item-directive>
-      <myframe-menu-item-directive label="Weather"  icon="fa-sun-o"    route="Weather Page"></myframe-menu-item-directive>
-      <myframe-menu-item-directive label="Exchange" icon="fa-eur"      route="Exchange Page"></myframe-menu-item-directive>
-      <myframe-menu-item-directive label="Some Values" icon="fa-cogs"  route="Some Values Page"></myframe-menu-item-directive>
-      <myframe-menu-groupitem-directive> </myframe-menu-groupitem-directive>
-    </myframe-menu-directive>
+      <div>
+        <myframe-menu-dir>
 
-  </myframe-work-directive>
+          <myframe-menu-item-dir label="Home" icon="fa-home" route="/home"></myframe-menu-item-dir>
+          <myframe-menu-item-dir label="Weather" icon="fa-sun-o" route="Weather Page"></myframe-menu-item-dir>
+          <myframe-menu-item-dir label="Exchange" icon="fa-eur" route="Exchange Page"></myframe-menu-item-dir>
 
-  
+          <myframe-menu-group-item-dir label="Some Values" icon="fa-cogs">
+            <myframe-menu-item-dir label="Value 1" icon="fa-cog" route="Value 1"></myframe-menu-item-dir>
+            <myframe-menu-item-dir label="Value 2" icon="fa-cog" route="Value 2"></myframe-menu-item-dir>
+            <myframe-menu-item-dir label="Value 3" icon="fa-cog" route="Value 3"></myframe-menu-item-dir>
+          </myframe-menu-group-item-dir>
+
+
+        </myframe-menu-dir>
+      </div>
+
+
+    </div>
+
+  </myframe-work-dir>
+
 
 
   <!--app main module-->
@@ -52,8 +65,10 @@
   <script src="/ext-modules/myframeMenu/myframeMenuCtrl.js"></script>
   <script src="/ext-modules/myframeMenu/myframeMenuDir.js"></script>
   <script src="/ext-modules/myframeMenu/myframeMenuItemDir.js"></script>
+  <script src="/ext-modules/myframeMenu/myframeMenuGroupItemDir.js"></script>
 
   <script src="/ext-modules/myframeDashboard/myframeDashboard.js"></script>
+  <script src="/ext-modules/myframeDashboard/myframeDashboardDir.js"></script>
 </body>
 
 </html>

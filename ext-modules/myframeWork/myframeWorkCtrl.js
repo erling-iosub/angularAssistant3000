@@ -1,16 +1,27 @@
 `use strict`
 myframeWork.controller(`myframeWorkCtrl`,
   function ($scope, $window, $timeout, $rootScope) {
+    
+
     $scope.isMenuVisible = true;
     $scope.isMenuButtonVisible = true;
 
-    
+    // this flag is kept also in myframeMenuCtrl. the menu needs it because is a stand alone 
+    // element
+    // duplicate code
+    $scope.isMenuVertical = true;
+
     $scope.$on(`myframe-menu-item-selected-event`,
       (evt, data) => {
-        $scope.routeString = data.route
-
+        $scope.routeString = data.route;
+        console.log(`frameWork RouteString`, $scope.routeString)
         checkWidth()
         broadcastMenuState()
+      })
+
+    $scope.$on(`myframe-menu-toggle-orientation`,
+      (evt, data) => {
+        $scope.isMenuVertical = data.isMenuVertical;
       })
 
     $scope.menuButtonClicked = () => {

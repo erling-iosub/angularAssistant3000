@@ -1,9 +1,9 @@
-myframeMenu.directive(`myframeMenuDir`,
+myframeMenu.directive(`myframeDashboardDir`,
   () => {
     return {
       restrict: `E`,
       transclude: true,
-      templateUrl:`/ext-modules/myframeMenu/myframeMenuTemplate.html`,
+      templateUrl:`/ext-modules/myframeDashboard/myframeDashboardTemplate.html`,
       scope: {
         
       },

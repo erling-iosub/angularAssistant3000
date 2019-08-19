@@ -1,5 +1,12 @@
 assistant.controller(`assistantCtrl`,
   function assistantCtrl($scope, getDataService) {
+
+    $scope.$on(`myframe-menu-item-selected-event`,
+      (evt, data) => {
+        $scope.appRouteString = data.route;
+        console.log(`App Scope Route`, $scope.appRouteString)
+      })
+
     $scope.clock = getDataService.getTime();
     $scope.day = getDataService.getDay();
 
@@ -16,17 +23,17 @@ assistant.controller(`assistantCtrl`,
       reject(error)
     })
 
-    getDataService.getWeather().then( (resolve) => {
-      $scope.weather = resolve;
-      $scope.weatherTime = (Date($scope.weather.timetime).split(" ")[4]).split(":")[0] + ":" +
-        (Date($scope.weather.timetime).split(" ")[4]).split(":")[1]
-      $scope.$apply();
+    // getDataService.getWeather().then( (resolve) => {
+    //   $scope.weather = resolve;
+    //   $scope.weatherTime = (Date($scope.weather.timetime).split(" ")[4]).split(":")[0] + ":" +
+    //     (Date($scope.weather.timetime).split(" ")[4]).split(":")[1]
+    //   $scope.$apply();
 
-      console.log(`weather `, $scope.weather)
-      console.log(`weatherTime `, $scope.weatherTime)
-    }, (error)=>{
-      reject(error)
-    })
+    //   console.log(`weather `, $scope.weather)
+    //   console.log(`weatherTime `, $scope.weatherTime)
+    // }, (error)=>{
+    //   reject(error)
+    // })
 
     console.log(`clock `, $scope.clock)
     console.log(`day `, $scope.day)

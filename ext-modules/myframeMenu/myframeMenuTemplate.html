@@ -1,6 +1,13 @@
-<div class="myframe-menu-area" ng-show="showMenu">
-  <ul class="myframe-menu" ng-transclude>
+<div class="myframe-menu-area"
+  ng-class="{'myframe-menu-area-vertical': isVertical, 'myframe-menu-area-horizontal': !isVertical }"
+  ng-show="showMenu">
 
-  </ul>
+  <ul class="myframe-menu" ng-transclude> </ul>
+
+  <a class="btn myframe-menu-layout-button"
+    ng-class="{'myframe-menu-layout-button-horizontal': !isVertical, 'fa-rotate-270' : !isVertical}"
+    ng-click="toggleMenuOrientation()">
+    <i class="fa fa-chevron-up"></i>
+  </a>
+
 </div>
-
