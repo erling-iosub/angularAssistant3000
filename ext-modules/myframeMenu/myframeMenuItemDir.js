@@ -17,6 +17,7 @@ myframeMenu.directive(`myframeMenuItemDir`,
 
         scope.isVertical = () => {
           return ctrl.isVertical() || element.parents('.myframe-menu-group-item').length>0;
+        
         }
 
         //jquery on function

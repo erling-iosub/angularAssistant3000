@@ -109,10 +109,10 @@
   padding: 0;
 }
 
-@media screen and (max-width:768){
+/* @media screen and (max-width:768){
   .myframe-menu-area-horizontal{
     min-height: 100vh;
     width:200px;
     padding-top: 30px;
   }
-}
+} */
