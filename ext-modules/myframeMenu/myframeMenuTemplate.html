@@ -5,6 +5,7 @@
   <ul class="myframe-menu" ng-transclude> </ul>
 
   <a class="btn myframe-menu-layout-button"
+    ng-show="allowHorizontalToggle"
     ng-class="{'myframe-menu-layout-button-horizontal': !isVertical, 'fa-rotate-270' : !isVertical}"
     ng-click="toggleMenuOrientation()">
     <i class="fa fa-chevron-up"></i>
