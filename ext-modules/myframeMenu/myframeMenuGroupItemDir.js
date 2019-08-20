@@ -35,7 +35,6 @@ myframeMenu.directive(`myframeMenuGroupItemDir`,
           //console.log('pos: ',pos);
           // jquery css function to set the left and top position 
           $('.myframe-menu-group-item').css( {'margin-left': pos.left+20, 'margin-top': 0} )
-          console.log('length: ', element.parents('.myframe-menu-group-item').length>0)
         }
 
       }
