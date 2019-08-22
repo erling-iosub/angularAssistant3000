@@ -13,21 +13,17 @@ myframeMenu.directive(`myframeMenuGroupItemDir`,
       link: (scope,element,attr,ctrl) => {
         // flag and function to open/close a group item menu
         scope.isOpen = false;
-        scope.closeMenu = () => {
-          scope.isOpen = false;
-        }
 
         scope.clicked = () => {
           scope.isOpen = !scope.isOpen;
- 
-          if ( element.parents('.myframe-menu-group-item').length == 0) {
+
+          if ( element.parents('.myframe-menu-group-item').length === 0) {
             scope.setSubmenuPosition();
           }
         }
 
         scope.isVertical = () => {
           return ctrl.isVertical() || element.parents('.myframe-menu-group-item').length > 0;
-          
         }
 
         scope.setSubmenuPosition = () => {
