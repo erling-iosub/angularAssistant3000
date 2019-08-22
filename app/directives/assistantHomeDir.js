@@ -1,9 +1,10 @@
 assistant.directive('assistantHomeDir',
   () => {
     return {
+      controller: `assistantCtrl`,
       scope:{
 
       },
-      template:'<h2>HOME</h2>'
+      templateUrl:"/app/templates/homeTemplate.html"
     }
   })

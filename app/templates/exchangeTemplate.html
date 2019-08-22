@@ -1,0 +1,10 @@
+<div>
+  <h4>Exchange Rates:</h4>
+
+  <ul class="exchange-unordered-list">
+    <li ng-repeat="(key,value) in money">
+      1 {{key}} = {{value | number:2}} Ron
+    </li>
+  </ul>
+  
+</div>

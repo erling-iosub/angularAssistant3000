@@ -1,9 +1,10 @@
 assistant.directive('assistantWeatherDir',
   () => {
     return {
+      controller: `assistantCtrl`,
       scope:{
 
       },
-      template:'<h2>WEATHER</h2>'
+      templateUrl:"/app/templates/weatherTemplate.html"
     }
   })

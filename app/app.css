@@ -7,3 +7,11 @@ body {
 .container-fluid{
   padding: 0px;
 }
+
+.weather-unordered-list{
+  list-style: none;
+}
+
+.exchange-unordered-list{
+  list-style: none;
+}

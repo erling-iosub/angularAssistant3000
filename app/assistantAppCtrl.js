@@ -1,44 +1,45 @@
 assistant.controller(`assistantCtrl`,
-  function assistantCtrl($scope, getDataService, $rootScope) {
+  function assistantCtrl($scope, getDataService, convertDataService) {
 
+    $scope.clock = convertDataService.getTime();
+    $scope.day = convertDataService.getDay();
 
-
-    // window.$rootScope = $rootScope;
-    // $scope.$on(`myframe-menu-item-selected-event`,
-    //   (evt, data) => {
-    //     $scope.appRouteString = data.route;
-    //     console.log(`App Scope Route`, $scope.appRouteString)
-    //   })
-
-
-    $scope.clock = getDataService.getTime();
-    $scope.day = getDataService.getDay();
-
-    $scope.money;
-    $scope.weather;
-    $scope.weatherTime;
-
-    getDataService.getMoney().then( (resolve) => {
-      $scope.money = resolve;
+    convertDataService.convertMoney().then((res) => {
+      $scope.money = res;
       $scope.$apply();
-      
-      console.log(`money `, $scope.money)
-    }, (error)=>{
-      reject(error)
+      console.log("aici",$scope.money)
+    },(err)=>{
+      console.log(err)
     })
+
+    
+
+    // convertDataService.convertWeather().then((res)=>{
+    //   $scope.weather = res;
+    //   $scope.counter++;
+    //   $scope.$apply();
+    //   console.log($scope.weather)
+    //   console.log("Counter: ",$scope.counter)
+    // },(err)=>{
+    //   console.log(err)
+    // })
+
+
+
+    // getDataService.getMoney().then( (resolve) => {
+    //   $scope.money = resolve;
+    //   $scope.$apply();
+    //   return $scope.money;
+    // }, (error)=>{
+    //   reject(error)
+    // })
 
     // getDataService.getWeather().then( (resolve) => {
     //   $scope.weather = resolve;
     //   $scope.weatherTime = (Date($scope.weather.timetime).split(" ")[4]).split(":")[0] + ":" +
     //     (Date($scope.weather.timetime).split(" ")[4]).split(":")[1]
     //   $scope.$apply();
-
-    //   console.log(`weather `, $scope.weather)
-    //   console.log(`weatherTime `, $scope.weatherTime)
     // }, (error)=>{
     //   reject(error)
     // })
-
-    console.log(`clock `, $scope.clock)
-    console.log(`day `, $scope.day)
   })
