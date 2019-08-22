@@ -4,12 +4,8 @@ myframeMenu.directive(`myframeDashboardDir`,
       restrict: `E`,
       transclude: true,
       templateUrl:`/ext-modules/myframeDashboard/myframeDashboardTemplate.html`,
-      scope: {
-        
-      },
       link: function (scope,element,attr) {
 
       },
-      controller:"myframeMenuCtrl"
     }
   })
