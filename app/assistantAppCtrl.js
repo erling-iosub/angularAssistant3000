@@ -1,11 +1,15 @@
 assistant.controller(`assistantCtrl`,
-  function assistantCtrl($scope, getDataService) {
+  function assistantCtrl($scope, getDataService, $rootScope) {
 
-    $scope.$on(`myframe-menu-item-selected-event`,
-      (evt, data) => {
-        $scope.appRouteString = data.route;
-        console.log(`App Scope Route`, $scope.appRouteString)
-      })
+
+
+    // window.$rootScope = $rootScope;
+    // $scope.$on(`myframe-menu-item-selected-event`,
+    //   (evt, data) => {
+    //     $scope.appRouteString = data.route;
+    //     console.log(`App Scope Route`, $scope.appRouteString)
+    //   })
+
 
     $scope.clock = getDataService.getTime();
     $scope.day = getDataService.getDay();

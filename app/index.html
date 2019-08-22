@@ -21,14 +21,12 @@
   <!--custom directive for framework-->
 
   <myframe-work-dir title="The Assistant" subtitle="3000" icon-file="images/robot_logo.png">
-    <div class="row">
-
       <div>
         <myframe-menu-dir>
 
           <myframe-menu-item-dir label="Home" icon="fa-home" route="/home"></myframe-menu-item-dir>
-          <myframe-menu-item-dir label="Weather" icon="fa-sun-o" route="Weather Page"></myframe-menu-item-dir>
-          <myframe-menu-item-dir label="Exchange" icon="fa-eur" route="Exchange Page"></myframe-menu-item-dir>
+          <myframe-menu-item-dir label="Weather" icon="fa-sun-o" route="/weather"></myframe-menu-item-dir>
+          <myframe-menu-item-dir label="Exchange" icon="fa-eur" route="/exchange"></myframe-menu-item-dir>
 
           <myframe-menu-group-item-dir label="Some Values" icon="fa-cogs">
             <myframe-menu-item-dir label="Value 1" icon="fa-cog" route="Value 1"></myframe-menu-item-dir>
@@ -39,10 +37,6 @@
 
         </myframe-menu-dir>
       </div>
-
-
-    </div>
-
   </myframe-work-dir>
 
 
@@ -57,6 +51,10 @@
   <script src="assistantApp.js"></script>
   <script src="getDataService.js"></script>
   <script src="assistantAppCtrl.js"></script>
+  <script src="/app/assistantRouteConfig.js"></script>
+  <script src="/app/directives/assistantHomeDir.js"></script>
+  <script src="/app/directives/assistantWeatherDir.js"></script>
+
 
   <script src="/ext-modules/myframeWork/myframeWork.js"></script>
   <script src="/ext-modules/myframeWork/myframeWorkDir.js"></script>

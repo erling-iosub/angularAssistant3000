@@ -28,13 +28,14 @@ myframeWork.controller(`myframeWorkCtrl`,
       $scope.isMenuVisible = !$scope.isMenuVisible;
       // need to pass this value to its child (myframeWorkCtrl)
       broadcastMenuState();
-      console.log("isMenuVisible", $scope.isMenuVisible)
+      //console.log("isMenuVisible", $scope.isMenuVisible)
       //$scope.$apply();
     }
 
     var broadcastMenuState = () => {
       $rootScope.$broadcast("myframeMenu-show", {
-        show: $scope.isMenuVisible
+        show: $scope.isMenuVisible,
+        isVertical: $scope.isMenuVertical
       })
     }
 
