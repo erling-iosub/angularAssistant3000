@@ -7,10 +7,10 @@ myframeMenu.directive(`myframeMenuDir`,
       scope: {
 
       },
-      link: (scope, el, attr) => {
+      link: (scope, element, attr) => {
         
         $timeout(() => {
-          var item = el.find('.myframe-selectable-item:first')
+          var item = element.find('.myframe-selectable-item:first')
           item.trigger('click');
           console.log(`click`)
         })

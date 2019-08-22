@@ -10,29 +10,17 @@ myframeWork.controller(`myframeWorkCtrl`,
 
     $scope.menuButtonClicked = () => {
       $scope.isMenuVisible = !$scope.isMenuVisible;
-      // need to pass this value to its child (myframeWorkCtrl)
       broadcastMenuState();
-<<<<<<< HEAD
-      //console.log("isMenuVisible", $scope.isMenuVisible)
-=======
->>>>>>> master
-      //$scope.$apply();
     }
 
     var broadcastMenuState = () => {
       $rootScope.$broadcast("myframeMenu-show", {
         show: $scope.isMenuVisible,
-<<<<<<< HEAD
-        isVertical: $scope.isMenuVertical
-=======
         isVertical: $scope.isMenuVertical,
         allowHorizontalToggle: !$scope.isMenuButtonVisible
->>>>>>> master
       })
     }
 
-
-    // myframework is a namespace used later on to destroy the menu button
     $($window).on('resize.myframework', () => {
       $scope.$apply( () => {
         checkWidth();
@@ -40,8 +28,6 @@ myframeWork.controller(`myframeWorkCtrl`,
       })
     })
 
-    // let off the resize event after the checkWidth function is called and 
-    // the var s are set
     $($window).on("destroy", () => {
       $($window).off("resize.myframework")
     })
