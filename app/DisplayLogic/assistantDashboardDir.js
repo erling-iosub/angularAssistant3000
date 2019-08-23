@@ -1,4 +1,4 @@
-assistant.directive('assistantHomeDir',
+assistant.directive('assistantDashboardDir',
   () => {
     return {
       controller: `assistantCtrl`,

@@ -32,14 +32,15 @@
 
           <myframe-menu-group-item-dir label="Some Values" icon="fa-cogs">
             <myframe-menu-item-dir label="Value 1" icon="fa-cog" route="/somevalues/value1"></myframe-menu-item-dir>
-            <myframe-menu-item-dir label="Value 2" icon="fa-cog" route="/somevalues/value1"></myframe-menu-item-dir>
-            <myframe-menu-item-dir label="Value 3" icon="fa-cog" route="/somevalues/value1"></myframe-menu-item-dir>
+            <myframe-menu-item-dir label="Value 2" icon="fa-cog" route="/somevalues/value2"></myframe-menu-item-dir>
+            <myframe-menu-item-dir label="Value 3" icon="fa-cog" route="/somevalues/value3"></myframe-menu-item-dir>
           </myframe-menu-group-item-dir>
-
 
         </myframe-menu-dir>
       </div>
+
   </myframe-work-dir>
+
 
 
 
@@ -53,16 +54,21 @@
 
 
   <script src="assistantApp.js"></script>
+  <script src="assistantAppCtrl.js"></script>
+
+  <script src="/app/assistantRouteConfig.js"></script>
   <script src="getDataService.js"></script>
   <script src="convertDataService.js"></script>
 
-  <script src="assistantAppCtrl.js"></script>
-  
-  <script src="/app/assistantRouteConfig.js"></script>
-  <script src="/app/directives/assistantHomeDir.js"></script>
-  <script src="/app/directives/assistantWeatherDir.js"></script>
-  <script src="/app/directives/assistantExchangeDir.js"></script>
-  <script src="/app/directives/assistantSomevaluesDir.js"></script>
+
+  <!--Display Logic-->
+  <script src="DisplayLogic/displayCtrl.js"></script>
+  <script src="/app/DisplayLogic/assistantClockDir.js"></script>
+  <script src="/app/DisplayLogic/assistantDashboardDir.js"></script>
+  <script src="/app/DisplayLogic/assistantWeatherDir.js"></script>
+  <script src="/app/DisplayLogic/assistantExchangeDir.js"></script>
+  <script src="/app/DisplayLogic/assistantSomevaluesDir.js"></script>
+
 
 
   <script src="/ext-modules/myframeWork/myframeWork.js"></script>

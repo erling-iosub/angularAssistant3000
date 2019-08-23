@@ -2,7 +2,6 @@
 myframeWork.controller(`myframeWorkCtrl`,
   function ($scope, $window, $timeout, $rootScope, $location) {
 
-
     $scope.isMenuVisible = true;
     $scope.isMenuButtonVisible = true;
     $scope.isMenuVertical = true;

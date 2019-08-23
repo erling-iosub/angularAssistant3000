@@ -10,6 +10,7 @@ assistant.factory(`convertDataService`,
           };
         });
       },
+
       convertWeather: function(){
         return getDataService.getWeather().then( (res) => {
           return {

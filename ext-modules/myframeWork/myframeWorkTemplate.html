@@ -1,58 +1,66 @@
-<!--TITLE BAR -->
-<div class="myframework-title-bar">
-  <div class="row">
+<div>
 
-    <!--LEFT SIDE-->
-    <div class="myframework-logo-area col-sm-6">
-      <img class="myframework-icon" ng-src='{{iconFile}}'>
-      <div class="myframework-title-area">
+  <!--TITLE BAR -->
+  <div class="myframework-title-bar" ng-controller="myframeWorkCtrl">
+    <div class="row">
 
-        <p class="myframework-logo-title">{{title}}</p>
-        <p class="myframework-logo-subtitle">{{subtitle}}</p>
-      </div>
+      <!--LEFT SIDE-->
+      <div class="myframework-logo-area col-sm-6">
+        <img class="myframework-icon" ng-src='{{iconFile}}'>
+        <div class="myframework-title-area">
 
-    <!-- Menu Button, to toggle on/off the view of the menu
-         the menu will be visible only if the scope has a "isMenuButtonVisible" var set to true-->  
-        <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()" 
-          class= "myframework-collapsed-menu pull-right">
+          <p class="myframework-logo-title">{{title}}</p>
+          <p class="myframework-logo-subtitle">{{subtitle}}</p>
+        </div>
+
+        <!-- Menu Button, to toggle on/off the view of the menu
+         the menu will be visible only if the scope has a "isMenuButtonVisible" var set to true-->
+        <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()" class="myframework-collapsed-menu pull-right">
           <button type="button" class="btn myframework-nav-button">
             <i class="fa fa-bars"></i>
           </button>
         </div>
-    </div>
-
-    <!--RIGHT SIDE-->
-    <div class="myframework-right-side-controls col-sm-6">
-      <div>
-        <button class="btn btn-primary" ng-click="">Button</button>
-        <button class="btn btn-success" ng-click="">Button</button>
-        <button class="btn btn-warning" ng-click="">Button</button>
       </div>
+
+      <!--RIGHT SIDE-->
+
+      <!--CLOCK MODULE-->
+      <div ng-controller="displayCtrl" ng-model="format" style="float: right;">
+        <p style="margin: 0px; padding: 0px;" assistant-clock-dir="formatClock"></p>
+        <span assistant-clock-dir="formatDate"></span>
+      </div>
+
+      <div class="myframework-right-side-controls col-sm-6">
+        <div>
+          <button class="btn btn-primary" ng-click="">Button</button>
+          <button class="btn btn-success" ng-click="">Button</button>
+          <button class="btn btn-warning" ng-click="">Button</button>
+        </div>
+      </div>
+
     </div>
-
   </div>
-</div>
 
 
 
-<!-- Framework BODY -->
-<div>
-  <!--MENU IS TRANSCLUDED HERE-->
+  <!-- Framework BODY -->
+  <div>
+    <!--MENU IS TRANSCLUDED HERE-->
     <div>
       <ng-transclude></ng-transclude>
     </div>
 
-  <!-- View are shown here -->
-  <div ng-view 
-       class="myframe-view" 
-       ng-class="{'myframe-view-full-width': !isMenuVertical || !isMenuVisible}">
+    <!-- View are shown here -->
+    <div ng-view class="myframe-view" ng-class="{'myframe-view-full-width': !isMenuVertical || !isMenuVisible}">
+    </div>
   </div>
-</div>
 
 
 
-<!-- TESTING ROUTES 
+  <!-- TESTING ROUTES 
   <div style="position:absolute;left:220px;top:200px;color:red;font-size: 44px;">
   {{routeString}}
   </div> 
 -->
+
+</div>

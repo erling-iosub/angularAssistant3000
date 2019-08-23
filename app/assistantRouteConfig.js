@@ -6,37 +6,37 @@ assistant.config ([`$routeProvider`, ($routeProvider)=>{
     {
       url:'/home',
       config: {
-        template:'<assistant-home-dir></assistant-home-dir>'
+        templateUrl:"/templates/homeTemplate.html"
       }
     },
     {
       url:'/weather',
       config: {
-        template:'<assistant-weather-dir></assistant-weather-dir>'
+        templateUrl:"/templates/weatherTemplate.html"
       }
     },
     {
       url:'/exchange',
       config: {
-        template:'<assistant-exchange-dir></assistant-exchange-dir>'
+        templateUrl:"/templates/exchangeTemplate.html"
       }
     },
     {
       url:'/somevalues/value1',
       config: {
-        template:'<assistant-somevalues-dir></assistant-somevalues-dir>'
+        templateUrl:"/templates/somevaluesTemplate1.html"
       }
     },
     {
       url:'/somevalues/value2',
       config: {
-        template:'<assistant-somevalues-dir></assistant-somevalues-dir>'
+        templateUrl:"/templates/somevaluesTemplate2.html"
       }
     },
     {
       url:'/somevalues/value3',
       config: {
-        template:'<assistant-somevalues-dir></assistant-somevalues-dir>'
+        template:"/templates/somevaluesTemplate3.html"
       }
     },
   ]
@@ -44,6 +44,4 @@ assistant.config ([`$routeProvider`, ($routeProvider)=>{
   routes.forEach( (route) => {
     $routeProvider.when(route.url, route.config);
   });
-    
-
 }])

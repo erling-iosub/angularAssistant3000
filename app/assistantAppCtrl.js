@@ -1,25 +1,27 @@
 assistant.controller(`assistantCtrl`,
-  function assistantCtrl($scope, getDataService, convertDataService) {
+  function assistantCtrl($scope, getDataService, convertDataService, $interval) {
 
     $scope.clock = convertDataService.getTime();
     $scope.day = convertDataService.getDay();
 
+
     convertDataService.convertMoney().then((res) => {
-      $scope.money = res;
-      $scope.$apply();
-      console.log("aici",$scope.money)
-    },(err)=>{
+      $scope.money = res; // eur usd gbp already converted from the service
+      //$scope.$apply();
+    }, (err) => {
       console.log(err)
     })
 
-    
+
+
+
+
+
+
 
     // convertDataService.convertWeather().then((res)=>{
     //   $scope.weather = res;
-    //   $scope.counter++;
     //   $scope.$apply();
-    //   console.log($scope.weather)
-    //   console.log("Counter: ",$scope.counter)
     // },(err)=>{
     //   console.log(err)
     // })

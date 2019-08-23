@@ -1,10 +1,12 @@
-<div>
+<div ng-controller="displayCtrl">
   <h4>Exchange Rates:</h4>
 
-  <ul class="exchange-unordered-list">
-    <li ng-repeat="(key,value) in money">
-      1 {{key}} = {{value | number:2}} Ron
-    </li>
-  </ul>
+  <div ng-model = "money">
+    <ul style="list-style: none" assistant-exchange-dir= "money">
+      <li  ng-repeat="(key,value) in money">
+        1 {{key}}: {{value | number:2}} Ron
+      </li>
+    </ul>
+  </div>
   
 </div>
