@@ -7,15 +7,14 @@
   <title>AngularJS Spa Framework</title>
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-
   <link href="/node_modules/font-awesome/css/font-awesome.css" rel="stylesheet">
   <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
   <link href="/node_modules/angular-gridster/dist/angular-gridster.css" rel="stylesheet">
-
   <link href="app.css" rel="stylesheet">
   <link href="/ext-modules/myframeWork/myframeWork.css" rel="stylesheet">
   <link href="/ext-modules/myframeMenu/myframeMenu.css" rel="stylesheet">
   <link href="/ext-modules/myframeDashboard/myframeDashboard.css" rel="stylesheet">
+  <link rel="shorcut icon" type="image/x-icon" href="/app/favicon.ico">
 </head>
 
 <body class="container-fluid" ng-controller="assistantCtrl">
@@ -59,16 +58,16 @@
   <script src="assistantAppCtrl.js"></script>
 
   <script src="/app/assistantRouteConfig.js"></script>
-  <script src="getDataService.js"></script>
-  <script src="convertDataService.js"></script>
+  <script src="/app/services/getDataService.js"></script>
+  <script src="/app/services/convertDataService.js"></script>
 
 
   <!--Display Logic-->
-  <script src="/app/DisplayLogic/assistantClockDir.js"></script>
-  <script src="/app/DisplayLogic/assistantDashboardDir.js"></script>
-  <script src="/app/DisplayLogic/assistantWeatherDir.js"></script>
-  <script src="/app/DisplayLogic/assistantExchangeDir.js"></script>
-  <script src="/app/DisplayLogic/assistantSomevaluesDir.js"></script>
+  <script src="/app/directives/assistantClockDir.js"></script>
+  <script src="/app/directives/assistantDashboardDir.js"></script>
+  <script src="/app/directives/assistantWeatherDir.js"></script>
+  <script src="/app/directives/assistantExchangeDir.js"></script>
+  <script src="/app/directives/assistantSomevaluesDir.js"></script>
 
   <script src="/ext-modules/myframeWork/myframeWork.js"></script>
   <script src="/ext-modules/myframeWork/myframeWorkDir.js"></script>
