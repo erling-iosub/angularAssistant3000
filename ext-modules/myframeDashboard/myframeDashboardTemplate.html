@@ -1,7 +1,26 @@
-<div gridster>
+
+<div class="myframe-dashboard-header">
+  {{title}}
+</div>
+
+<!--gridsterOpts is an object with rules on link function from assistantDashboardDir-->
+<div gridster= "gridsterOpts">
   <ul>
     <li gridster-item="item" ng-repeat="item in widgets">
-      <div></div>
+
+      <div class="myframe-widget-header">
+        <span style="float: left;">{{item.title}}</span>
+        <div class="myframe-header-buttons">
+          <button class="btn btn-default pull-right">
+            <i class="fa fa-remove"></i>
+          </button>
+          <button class="btn btn-default pull-right">
+              <i class="fa fa-gear"></i>
+            </button>
+        </div>
+      </div>
+
+        <div class="myframe-widget-body"></div>
     </li>
   </ul>
 </div>

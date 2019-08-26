@@ -10,6 +10,12 @@ assistant.config ([`$routeProvider`, ($routeProvider)=>{
       }
     },
     {
+      url:'/dashboard',
+      config: {
+        template:"<assistant-dashboard-dir></assistant-dashboard-dir>"
+      }
+    },
+    {
       url:'/weather',
       config: {
         templateUrl:"/templates/weatherTemplate.html"
@@ -43,5 +49,8 @@ assistant.config ([`$routeProvider`, ($routeProvider)=>{
 
   routes.forEach( (route) => {
     $routeProvider.when(route.url, route.config);
+    $routeProvider.otherwise('/dashboard', "<assistant-dashboard-dir></assistant-dashboard-dir>")
   });
+
+  
 }])

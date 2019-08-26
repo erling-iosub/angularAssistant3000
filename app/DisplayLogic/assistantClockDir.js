@@ -1,7 +1,7 @@
 assistant.directive(`assistantClockDir`,
   ($interval, dateFilter) => {
     return {
-      controller: `displayCtrl`,
+      controller: `assistantCtrl`,
       link: (scope, element, attrs, ctrl) => {
 
         var format;

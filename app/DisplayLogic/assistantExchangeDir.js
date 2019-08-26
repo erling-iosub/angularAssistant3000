@@ -1,7 +1,7 @@
 assistant.directive ( 'assistantExchangeDir',
   (convertDataService, $interval) => {
     return {
-      controller: `displayCtrl`,
+      controller: `assistantCtrl`,
       link: (scope, element, attrs, ctrl) => {
 
 

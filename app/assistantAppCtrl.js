@@ -4,20 +4,15 @@ assistant.controller(`assistantCtrl`,
     $scope.clock = convertDataService.getTime();
     $scope.day = convertDataService.getDay();
 
+    $scope.formatClock = 'HH:mm,'
+    $scope.formatDate = 'dd MMM'
 
-    convertDataService.convertMoney().then((res) => {
-      $scope.money = res; // eur usd gbp already converted from the service
-      //$scope.$apply();
-    }, (err) => {
-      console.log(err)
-    })
-
-
-
-
-
-
-
+    // convertDataService.convertMoney().then((res) => {
+    //   $scope.money = res; // eur usd gbp already converted from the service
+    //   //$scope.$apply();
+    // }, (err) => {
+    //   console.log(err)
+    // })
 
     // convertDataService.convertWeather().then((res)=>{
     //   $scope.weather = res;
@@ -25,8 +20,6 @@ assistant.controller(`assistantCtrl`,
     // },(err)=>{
     //   console.log(err)
     // })
-
-
 
     // getDataService.getMoney().then( (resolve) => {
     //   $scope.money = resolve;

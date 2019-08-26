@@ -24,18 +24,22 @@
 
       <!--RIGHT SIDE-->
 
-      <!--CLOCK MODULE-->
-      <div ng-controller="displayCtrl" ng-model="format" style="float: right;">
-        <p style="margin: 0px; padding: 0px;" assistant-clock-dir="formatClock"></p>
-        <span assistant-clock-dir="formatDate"></span>
-      </div>
-
       <div class="myframework-right-side-controls col-sm-6">
         <div>
           <button class="btn btn-primary" ng-click="">Button</button>
           <button class="btn btn-success" ng-click="">Button</button>
           <button class="btn btn-warning" ng-click="">Button</button>
+
+          <div ng-controller="assistantCtrl" ng-model="format" class="myframework-clock-module">
+            <div assistant-clock-dir="formatClock"></div>
+            <div style="margin-top: -25px;" assistant-clock-dir="formatDate"> </div>
+          </div>
+
+          <!--CLOCK MODULE-->
+
         </div>
+
+
       </div>
 
     </div>
@@ -51,7 +55,7 @@
     </div>
 
     <!-- View are shown here -->
-    <div ng-view class="myframe-view" ng-class="{'myframe-view-full-width': !isMenuVertical || !isMenuVisible}">
+    <div  ng-view class="myframe-view" ng-class="{'myframe-view-full-width': !isMenuVertical || !isMenuVisible}">
     </div>
   </div>
 

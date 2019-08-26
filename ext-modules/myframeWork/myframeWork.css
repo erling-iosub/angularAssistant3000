@@ -40,17 +40,23 @@
   }
 }
 
+.myframework-collapsed-menu{
+  display: inline-block;
+  margin-right: 30px;
+  height: 100%;
+}
+
 .myframework-right-side-controls{
-  line-height:60px;
+  line-height:50px;
 }
 
 .myframework-right-side-controls > div{
   text-align: center;
 }
 
-.myframework-collapsed-menu{
-  display: inline-block;
-  height: 100%;
+.myframework-clock-module{
+  margin-left: 7px;
+  float: right;
 }
 
 .myframework-nav-button{
