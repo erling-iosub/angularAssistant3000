@@ -1,2 +1,2 @@
 `use strict`
-const myframeDashboard = angular.module(`myframeDashboard`,[`gridster`])
+var myframeDashboard = angular.module(`myframeDashboard`,[`gridster`]);

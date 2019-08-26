@@ -1,7 +1,7 @@
 assistant.factory(`convertDataService`,
   (getDataService) => {
-    return {
-      convertMoney: function (){
+
+    var convertMoney = function (){
         return getDataService.getMoney().then((res) => {
           return {
             Eur: res.RON,
@@ -9,11 +9,12 @@ assistant.factory(`convertDataService`,
             Gbp: res.RON / res.GBP
           };
         });
-      },
+      }
 
-      convertWeather: function(){
+    var convertWeather = function(){
         return getDataService.getWeather().then( (res) => {
           return {
+            Location: "Bucharest",
             Time: (Date(res.time).split(" ")[4]).split(":")[0] + ":" + (Date(res.time).split(" ")[4]).split(":")[1],
             Temperature: res.temperature,
             Humidity: res.humidity,
@@ -22,11 +23,13 @@ assistant.factory(`convertDataService`,
             ChanceOfPrecipitation: res.precipProbability
           };
         });
-      },
-      getTime: function(){
+      }
+      
+    var convertTime = function(){
         return getDataService.getTime().split(":")[0] + ":" + getDataService.getTime().split(":")[1];
-      },
-      getDay: function(){
+      }
+    
+    var convertDay = function(){
         switch (getDataService.getDay()) {
           case 1:
             day = "Monday";
@@ -52,7 +55,13 @@ assistant.factory(`convertDataService`,
         }
         return day;
       }
-    }
+      
+      return {
+        convertMoney: convertMoney,
+        convertWeather: convertWeather,
+        getTime: convertTime,
+        getDay: convertDay,
+      }
   })
 
 

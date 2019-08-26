@@ -1,0 +1,18 @@
+<div class="assistant-exchange-widget">
+  
+    <div class="assistant-exchange-heading">
+      <i class= "fa fa-money" style="margin-left:5px;"></i>
+      <span class="assistant-exchange-title"> Exchange Rates</span>
+    </div>
+  
+    <div class="assistant-exchange-body " style="background-image:url('/app/images/money.png')">
+      <div class="assistant-exchange-view">
+        
+        <div class="assistant-exchange-values" ng-repeat="(key,value) in money">
+          1 {{key}} = {{value | number:2}} Ron
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  

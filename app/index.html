@@ -15,6 +15,10 @@
   <link href="/ext-modules/myframeMenu/myframeMenu.css" rel="stylesheet">
   <link href="/ext-modules/myframeDashboard/myframeDashboard.css" rel="stylesheet">
   <link rel="shorcut icon" type="image/x-icon" href="/app/favicon.ico">
+
+  <!--widget Css-->
+  <link href="/app/widgets/weather/assistantWeather.css" rel="stylesheet">
+  <link href="/app/widgets/money/assistantExchange.css" rel="stylesheet">
 </head>
 
 <body class="container-fluid" ng-controller="assistantCtrl">
@@ -34,7 +38,6 @@
           <myframe-menu-group-item-dir label="Some Values" icon="fa-cogs">
             <myframe-menu-item-dir label="Value 1" icon="fa-cog" route="/somevalues/value1"></myframe-menu-item-dir>
             <myframe-menu-item-dir label="Value 2" icon="fa-cog" route="/somevalues/value2"></myframe-menu-item-dir>
-            <myframe-menu-item-dir label="Value 3" icon="fa-cog" route="/somevalues/value3"></myframe-menu-item-dir>
           </myframe-menu-group-item-dir>
 
         </myframe-menu-dir>
@@ -65,9 +68,13 @@
   <!--Display Logic-->
   <script src="/app/directives/assistantClockDir.js"></script>
   <script src="/app/directives/assistantDashboardDir.js"></script>
-  <script src="/app/directives/assistantWeatherDir.js"></script>
-  <script src="/app/directives/assistantExchangeDir.js"></script>
-  <script src="/app/directives/assistantSomevaluesDir.js"></script>
+  <script src="/app/widgets/money/assistantExchangeDir.js"></script>
+  <script src="/app/directives/assistantHomeDir.js"></script>
+  <script src="/app/directives/assistantSomevalues1Dir.js"></script>
+  <script src="/app/directives/assistantSomevalues2Dir.js"></script>
+
+
+
 
   <script src="/ext-modules/myframeWork/myframeWork.js"></script>
   <script src="/ext-modules/myframeWork/myframeWorkDir.js"></script>
@@ -81,6 +88,11 @@
 
   <script src="/ext-modules/myframeDashboard/myframeDashboard.js"></script>
   <script src="/ext-modules/myframeDashboard/myframeDashboardDir.js"></script>
+  <script src="/ext-modules/myframeDashboard/myframeWidgetBodyDir.js"></script>
+
+  <script src="/app/widgets/weather/assistantWeatherDir.js"></script>
+
 </body>
+
 
 </html>

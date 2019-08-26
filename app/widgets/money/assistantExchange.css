@@ -1,0 +1,51 @@
+.assistant-exchange-widget{
+  height: 100%;
+  width: 100%;
+  min-height: 180px;
+  min-width: 180px;
+  font-size: 16px;
+  color: black;
+}
+
+.assistant-exchange-heading{
+  background-color: blue;
+  color: white;
+  height: 32px;
+  padding-top: 2px;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.assistant-exchange-body{
+  position: relative;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  min-height: 180px; 
+}
+
+.assistant-exchange-view{
+  background-color: rgba(255,255,255,.7);
+  position: absolute;
+  left: 15px;
+  top: 30px;
+  padding: 10px;
+  border:1px solid black;
+}
+
+.assistant-exchange-city-name{
+  text-align: left;
+  height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.assistant-exchange-values{
+  font-size: 16px;
+  text-align: left;
+  /* margin-top: -20px; */
+}

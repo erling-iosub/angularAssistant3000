@@ -1,7 +1,6 @@
 assistant.directive('assistantDashboardDir',
   () => {
     return {
-      controller: `assistantCtrl`,
       scope:{
 
       },
@@ -14,19 +13,22 @@ assistant.directive('assistantDashboardDir',
         scope.gridsterOpts = {
           columns: 12,
           margins: [20,20],
-          outerMargin: true,
+          outerMargin: false,
           pushing: true,
-          floating: false, 
+          floating: true, 
           swapping: false,
         },
 
         scope.widgets = [
           {
             title: "widget 1",
-            sizeX: 3,
-            sizeY: 3,
+            sizeX: 4,
+            sizeY: 4,
             row: 0,
             col: 0,
+            template: `<assistant-weather-dir></assistant-weather-dir>`,
+            widgetSettings:{
+            }
           },
           {
             title: "widget 2",
@@ -34,7 +36,10 @@ assistant.directive('assistantDashboardDir',
             sizeY: 4,
             row: 0,
             col: 5,
-          },
+            template: `<assistant-exchange-dir></assistant-exchange-dir>`,
+            widgetSettings:{
+            }
+          }
         ];
       }
     }

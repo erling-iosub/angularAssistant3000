@@ -1,0 +1,22 @@
+<div class="assistant-temperature-widget">
+  
+  <div class="assistant-temperature-heading">
+    <i class= "fa fa-thermometer-three-quarters" style="margin-left:5px;"></i>
+    <span class="assistant-temperature-title"> Weather</span>
+  </div>
+
+  <div class="assistant-temperature-body " style="background-image:url('/app/images/bucharest.png')">
+    <div class="assistant-temperature-view">
+      <div class="assistant-temperature-city-name">
+        {{weather.Location}}, {{weather.Time}}
+      </div>
+      
+      <div class="assistant-temperature-degrees">
+        <div>Temperature: {{weather.Temperature}} °C </div>
+        <div>Humidity: {{weather.Humidity*100 |number:0}} %</div>
+        <div>Uv Index: {{weather.UvIndex}} </div>
+      </div>
+    </div>
+  </div>
+
+</div>

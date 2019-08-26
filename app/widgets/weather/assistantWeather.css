@@ -1,0 +1,51 @@
+.assistant-temperature-widget{
+  height: 100%;
+  width: 100%;
+  min-height: 180px;
+  min-width: 180px;
+  font-size: 16px;
+  color: black;
+}
+
+.assistant-temperature-heading{
+  background-color: red;
+  color: white;
+  height: 32px;
+  padding-top: 2px;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.assistant-temperature-body{
+  position: relative;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  min-height: 180px; 
+}
+
+.assistant-temperature-view{
+  background-color: rgba(255,255,255,.7);
+  position: absolute;
+  right: 15px;
+  bottom: 30px;
+  padding: 10px;
+  border:1px solid black;
+}
+
+.assistant-temperature-city-name{
+  text-align: left;
+  height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.assistant-temperature-degrees{
+  font-size: 16px;
+  text-align: left;
+  /* margin-top: -20px; */
+}

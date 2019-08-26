@@ -6,7 +6,7 @@ assistant.config ([`$routeProvider`, ($routeProvider)=>{
     {
       url:'/home',
       config: {
-        templateUrl:"/templates/homeTemplate.html"
+        template:"<assistant-home-dir></assistant-home-dir>"
       }
     },
     {
@@ -18,33 +18,28 @@ assistant.config ([`$routeProvider`, ($routeProvider)=>{
     {
       url:'/weather',
       config: {
-        templateUrl:"/templates/weatherTemplate.html"
+        template:"<assistant-weather-dir></assistant-weather-dir>"
       }
     },
     {
       url:'/exchange',
       config: {
-        templateUrl:"/templates/exchangeTemplate.html"
+        template:"<assistant-exchange-dir></assistant-exchange-dir>"
       }
     },
     {
       url:'/somevalues/value1',
       config: {
-        templateUrl:"/templates/somevaluesTemplate1.html"
+        template:"<assistant-somevalues1-dir></assistant-somevalues1-dir>"
       }
     },
     {
       url:'/somevalues/value2',
       config: {
-        templateUrl:"/templates/somevaluesTemplate2.html"
+        template:"<assistant-somevalues2-dir></assistant-somevalues2-dir>"
       }
     },
-    {
-      url:'/somevalues/value3',
-      config: {
-        template:"/templates/somevaluesTemplate3.html"
-      }
-    },
+    
   ]
 
   routes.forEach( (route) => {

@@ -1,7 +1,7 @@
 assistant.factory(`getDataService`,
   function ($http) {
-    return {
-      getMoney: () => {
+
+      var getMoney = () => {
         return new Promise((resolve, reject) => {
           $http.get("http://localhost:8000/exchange")
             .then((response) => {
@@ -12,26 +12,35 @@ assistant.factory(`getDataService`,
               reject(reason)
             })
         })
-      },
-      getWeather: () => {
+      }
+      var getWeather= () => {
         return new Promise((resolve, reject) => {
           $http.get("http://localhost:8000/weather?units=si")
             .then((response) => {
               var weather = response.data.currently;
+              // var hour = new Date().toJSON().slice(11,19)
+              //   console.log( hour , "am cerut vremea")
               resolve(weather);
             }, (reason) => {
               //console.log("error")
               reject(reason)
             })
         })
-      },
-      getTime: () => {
+      }
+      var getTime= () => {
         var time = new Date().toTimeString();
         return time
-        },
-      getDay: () => {
+        }
+
+      var getDay= () => {
         var dayNumber = new Date().getDay();
         return dayNumber
       }
-    }
+
+      return {
+        getMoney: getMoney,
+        getWeather: getWeather,
+        getTime: getTime,
+        getDay: getDay,
+      }
   })
