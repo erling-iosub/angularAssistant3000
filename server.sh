@@ -1,1 +1,1 @@
-node server/express-server.js
+nodemon server/express-server.js

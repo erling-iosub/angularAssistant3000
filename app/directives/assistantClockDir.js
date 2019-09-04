@@ -3,7 +3,7 @@ assistant.directive(`assistantClockDir`,
     return {
       controller: `assistantCtrl`,
       link: (scope, element, attrs, ctrl) => {
-
+ 
         var format;
         // timeoutId;
 
