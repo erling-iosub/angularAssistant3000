@@ -7,6 +7,7 @@ assistant.controller(`assistantCtrl`,
     $scope.formatClock = 'HH:mm,'
     $scope.formatDate = 'dd MMM'
 
+
     // convertDataService.convertMoney().then((res) => {
     //   $scope.money = res; // eur usd gbp already converted from the service
     //   //$scope.$apply();

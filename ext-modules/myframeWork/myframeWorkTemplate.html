@@ -25,10 +25,10 @@
       <!--RIGHT SIDE-->
 
       <div class="myframework-right-side-controls col-sm-6">
-        <div>
-          <button class="btn btn-primary" ng-click="">Button</button>
-          <button class="btn btn-success" ng-click="">Button</button>
-          <button class="btn btn-warning" ng-click="">Button</button>
+        <div ng-controller="displayCtrl as ctrl">
+          <button class="btn btn-primary" ng-click="ctrl.test1()">Test1</button>
+          <button class="btn btn-success" ng-click="ctrl.test2()">Test2</button>
+          <button class="btn btn-warning" ng-click="ctrl.footballTest()">Test3</button>
 
           <div ng-controller="assistantCtrl" ng-model="format" class="myframework-clock-module">
             <div assistant-clock-dir="formatClock"></div>

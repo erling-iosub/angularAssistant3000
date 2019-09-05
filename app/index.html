@@ -31,7 +31,7 @@
 
           <myframe-menu-item-dir label="Home" icon="fa-home" route="/home"></myframe-menu-item-dir>
           <myframe-menu-item-dir label="Dashboard" icon="fa-id-card-o" route="/dashboard"></myframe-menu-item-dir>
-          <myframe-menu-item-dir label="Weather" icon="fa-sun-o" route="/weather"></myframe-menu-item-dir>
+          <myframe-menu-item-dir label="News" icon="fa-newspaper-o" route="/news"></myframe-menu-item-dir>
           <myframe-menu-item-dir label="Exchange" icon="fa-eur" route="/exchange"></myframe-menu-item-dir>
 
 
@@ -46,8 +46,6 @@
   </myframe-work-dir>
 
 
-
-
   <!--app main module-->
   <script src="/node_modules/jquery/dist/jquery.js"></script>
   <script src="/node_modules/angular/angular.js"></script>
@@ -59,11 +57,12 @@
 
   <script src="assistantApp.js"></script>
   <script src="assistantAppCtrl.js"></script>
+  <script src="displayCtrl.js"></script>
 
   <script src="/app/assistantRouteConfig.js"></script>
   <script src="/app/services/getDataService.js"></script>
   <script src="/app/services/convertDataService.js"></script>
-
+  <script src="/app/services/storeDataService.js"></script>
 
   <!--Display Logic-->
   <script src="/app/directives/assistantClockDir.js"></script>

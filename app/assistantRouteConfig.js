@@ -22,6 +22,12 @@ assistant.config ([`$routeProvider`, ($routeProvider)=>{
       }
     },
     {
+      url:'/news',
+      config: {
+        templateUrl:"/app/templates/newsTemplate.html"
+      }
+    },
+    {
       url:'/exchange',
       config: {
         template:"<assistant-exchange-dir></assistant-exchange-dir>"
