@@ -1,29 +1,43 @@
-
 <div class="myframe-dashboard-header">
   {{title}}
+  <!--assistantDashboardDir ln 10-->
+  <div class="myframe-dashboard-controls">
+    <div class="dropdown">
+      
+      <button class="btn btn-default dropdown-toggle" 
+              type="button" 
+              id="dropdownMenu1" 
+              data-toggle="dropdown" 
+              aria-expanded="true">
+        <i class="fa fa-plus"></i>
+        Add Widget
+        <span class='caret'></span>
+      </button>
+
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+  
+        <li ng-repeat="widget in widgetDefinitions"> <!--assistantDashboardDir ln 22-->
+          <a role="menuitem" ng-click="addNewWidget(widget)">
+            {{widget.title}} <!--assistantDashboardDir ln 26-->
+          </a> 
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
 </div>
 
-<!--gridsterOpts is an object with rules on link function from assistantDashboardDir-->
-<div gridster= "gridsterOpts">
-  <ul>
-    <li gridster-item="item" ng-repeat="item in widgets">
+  <!--gridsterOpts is an object with rules on link function from assistantDashboardDir-->
+  <div gridster="gridsterOpts">
+    <ul>
+      <li gridster-item="item" ng-repeat="item in widgets">
 
-      <!-- <div class="myframe-widget-header">
-        <span style="float: left;">{{item.title}}</span>
-        <div class="myframe-header-buttons">
-          <button class="btn btn-default pull-right">
-            <i class="fa fa-remove"></i>
-          </button>
-          <button class="btn btn-default pull-right">
-              <i class="fa fa-gear"></i>
-            </button>
-        </div>
-      </div> -->
-
-      <!--custom directive-->
+        <!--custom directive-->
         <myframe-widget-body-dir>
 
         </myframe-widget-body-dir>
-    </li>
-  </ul>
-</div>
+      </li>
+    </ul>
+  </div>

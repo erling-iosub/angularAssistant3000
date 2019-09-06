@@ -2,6 +2,7 @@ assistant.factory('storeDataService',
   
   function(){
 
+    var coordinates;
     var weatherData = {};
     var moneyData = {};
     var timerData = {}
@@ -33,6 +34,28 @@ assistant.factory('storeDataService',
       return timerData[key]
     }
 
+    var getCoordinates = (city)=>{
+      switch(city){
+        case'Bucuresti':
+          coordinates = '44.4268,26.1025'
+          break
+        
+        case'Brasov':
+          coordinates = '45.6580,25.6012'
+          break
+        
+        case'Cluj':
+          coordinates = '46.7712,23.6236'
+          break
+        
+        case'Constanta':
+          coordinates = '44.1598,28.6348'
+          break
+        }
+        return coordinates
+      }
+    
+
     return {
       readWeatherData: readWeatherData,
       writeWeatherData: writeWeatherData,
@@ -42,6 +65,7 @@ assistant.factory('storeDataService',
 
       setTimer: setTimer,
       readTimer: readTimer,
+      getCoordinates:getCoordinates,
     }
   })
 

@@ -53,7 +53,7 @@ myframeWork.controller(`myframeWorkCtrl`,
       (evt, data) => {
         $scope.isMenuVertical = data.isMenuVertical;
       })
-
+      
     // after the digest cicle call the checkWidth function 
     // to set the proper boolean value for isMenuButtonVisible
     $timeout(() => {

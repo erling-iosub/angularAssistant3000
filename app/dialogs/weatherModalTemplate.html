@@ -1,0 +1,15 @@
+<div class="modal-header" ng-controller="weatherModalCtrl as ctrl">
+  <h3 class="modal-title">Title</h3>
+</div>
+
+<div class="modal-body">
+  <h3>Name</h3>
+  <select ng-show="isLoaded" 
+          ng-model="ctrl.weather"
+          ng-options="(key,value) in ctrl.weather">{{key}}{{value}}</select>
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary" ng-click="saveSettings()">OK</button>
+  <button type="button" class="btn btn-primary" ng-click="$dismiss()">Cancel</button>
+</div>

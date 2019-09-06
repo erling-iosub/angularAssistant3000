@@ -43,3 +43,28 @@
   padding: 8px;
   padding-left: 20px;
 }
+
+.myframe-dashboard-controls{
+  float: right;
+  margin-right: 10px;
+}
+
+.myframe-widget-menu-area{
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  font-size: 22px;
+}
+
+.myframe-widget-menu-area .dropdown-menu{
+  margin-left: -20px;
+  padding-left: 15px;
+  min-width: 50px;
+}
+
+.myframe-widget-menu-area a{
+  color: white;
+}
+.myframe-widget-menu-area i{
+  cursor: pointer;
+}

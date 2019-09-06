@@ -1,0 +1,15 @@
+<div class="modal-header">
+  <h3 class="modal-title">Title</h3>
+</div>
+
+<div class="modal-body">
+  <h3>Name</h3>
+  <select ng-show="isLoaded" 
+          ng-model="moneyOptions" 
+          ng-options="currency.key for currency in moneyOptions">1{{currency.key}}</select>
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary" ng-click="saveSettings()">OK</button>
+  <button type="button" class="btn btn-primary" ng-click="$dismiss()">Cancel</button>
+</div>

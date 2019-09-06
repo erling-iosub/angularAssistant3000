@@ -8,7 +8,6 @@ assistant.directive('assistantDashboardDir',
       link: (scope) => {
 
         scope.title="Dashboard Page"
-        
         // gridster defaults
         scope.gridsterOpts = {
           columns: 12,
@@ -19,27 +18,37 @@ assistant.directive('assistantDashboardDir',
           swapping: false,
         },
 
-        scope.widgets = [
+        // widgets templates
+        scope.widgetDefinitions = [
           {
-            title: "widget 1",
-            sizeX: 4,
-            sizeY: 4,
-            row: 0,
-            col: 0,
-            template: `<assistant-weather-dir></assistant-weather-dir>`,
-            widgetSettings:{
-            }
+            title: 'Weather',
+            settings: {
+              sizeX: 4,
+              sizeY: 4,
+              template: `<assistant-weather-dir></assistant-weather-dir>`,
+              widgetSettings:{
+                id: 1000,
+                templateUrl: "/app/dialogs/weatherModalTemplate.html",
+                controller: 'displayCtrl'
+              },
+            },
           },
           {
-            title: "widget 2",
-            sizeX: 4,
-            sizeY: 4,
-            row: 0,
-            col: 5,
-            template: `<assistant-exchange-dir></assistant-exchange-dir>`,
-            widgetSettings:{
+            title: 'Money',
+            settings: {
+              sizeX: 4,
+              sizeY: 4,
+              template: `<assistant-exchange-dir></assistant-exchange-dir>`,
+              widgetSettings: {
+                id: 1100,
+                templateUrl: "/app/dialogs/moneyModalTemplate.html",
+                controller: 'displayCtrl'
+              }
             }
-          }
+          },
+        ],
+
+        scope.widgets = [
         ];
       }
     }

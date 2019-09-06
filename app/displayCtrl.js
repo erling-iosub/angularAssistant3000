@@ -57,16 +57,12 @@
       this.callMoneyApi() 
     }
 
-    footballTest(){
-      console.log('footballTest')
-      this.convertDataService.convertFootball().then((response)=>{
-        this.value = response;
-        console.log('this.value', this.value)
-        return this.value
-      })
+    test3(){
+      console.log(this.something)
+      this.something = !this.something
+      }
     }
-  }
-
+  
   displayCtrl.$inject = ['convertDataService', '$interval','$scope', 'storeDataService'];
   angular.module('assistant').controller('displayCtrl', displayCtrl)
 

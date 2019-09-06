@@ -1,32 +1,33 @@
-'use strict'
-class newCtrl {
-  constructor ($interval, $scope, convertDataService, storeDataService) {
-    this.$scope = $scope;
-    this.$interval = $interval;
-    this.storeDataService = storeDataService;
-    this.convertDataService = convertDataService;
-    // this.lastUpdate = new Date().getTime();
-    this.testFn()
-  }
+<html>
+  
+</html>
 
-  callWeatherApi() {
-    this.convertDataService.convertWeather().then(res => {
-      this.weather = res; 
-      return this.weather
-    })
-  }
 
-  writeTest(){
-    this.storeDataService.writeData('weather',  this.weather)
-  }
+$scope.$on(`myframe-menu-item-selected-event`,
+(evt, data) => {
+  $scope.routeString = data.route;
+  //
+  $location.path(data.route);
+  checkWidth();
+  broadcastMenuState();
+})
 
-  readTest(){
-    this.storeDataService.writeData('weather',  this.weather)
-  }
+$scope.$on(`myframe-menu-toggle-orientation`,
+(evt, data) => {
+  $scope.isMenuVertical = data.isMenuVertical;
+})
+// after the digest cicle call the checkWidth function 
+// to set the proper boolean value for isMenuButtonVisible
+$timeout(() => {
+checkWidth();
+}, 0)
+})
+
+
+var broadcastMenuState = () => {
+  $rootScope.$broadcast("myframeMenu-show", {
+    show: $scope.isMenuVisible,
+    isVertical: $scope.isMenuVertical,
+    allowHorizontalToggle: !$scope.isMenuButtonVisible
+  })
 }
-
-newCtrl.$inject = ['convertDataService', 'storeDataService', '$scope', '$interval'];
-angular.module('assistant').controller('newCtrl', newCtrl)
-
-      // this.weather = this.storeDataService.get('weather')
-      // this.storeDataService.writeData('weather',  this.weather)
