@@ -18,22 +18,24 @@
     
     callWeatherApi() {
       var currentTime = new Date().getTime();
-      if (this.weather === undefined || currentTime - this.lastUpdate > (2*60*1000) ){
+      if (this.weather === undefined || currentTime - this.lastUpdate > (1*60*1000) ){
         this.convertDataService.convertWeather().then(res => {
           this.lastUpdate = currentTime;
           this.weather = res;
           this.storeDataService.writeWeatherData('weather',  this.weather);
           this.storeDataService.setTimer('lastUpdate', this.lastUpdate)
+          console.log('this.weather API',this.weather)
           return this.weather ; 
         })  
       } else {
+        console.log('this.weather StoreData',this.weather)
         return this.weather = this.storeDataService.readWeatherData('weather')
       }
     }
 
     callMoneyApi() {
       var currentTime = new Date().getTime()
-      if (this.money === undefined || currentTime-this.lastUpdate>(2*60*1000)) {
+      if (this.money === undefined || currentTime-this.lastUpdate>(3*60*1000)) {
         this.convertDataService.convertMoney().then(res =>{
           this.lastUpdate = currentTime;
           this.money = res;

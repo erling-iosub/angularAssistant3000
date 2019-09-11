@@ -43,8 +43,8 @@ assistant.directive('assistantDashboardDir',
                 id: 1100,
                 templateUrl: "/app/dialogs/moneyModalTemplate.html",
                 controller: 'displayCtrl'
-              }
-            }
+              },
+            },
           },
         ],
 

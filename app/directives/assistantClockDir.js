@@ -4,26 +4,21 @@ assistant.directive(`assistantClockDir`,
       controller: `assistantCtrl`,
       link: (scope, element, attrs, ctrl) => {
  
-        var format;
-        // timeoutId;
+        console.log(ctrl.formatClock);
+        console.log(ctrl.formatDate)
 
-        function updateTime() {
-          element.text(dateFilter(new Date(), format))
+        function updateClock(){
+          element.text(dateFilter(new Date(), 'HH:mm'));
         }
 
-        scope.$watch(attrs.assistantClockDir, function (value) {
-          format = value;
-          updateTime();
-        });
-
-
-        element.on('$destroy', function () {
-          $interval.cancel(timeoutId);
-        });
+        // function updateDate(){
+        //   element.text(dateFilter(new Date(), ctrl.dateFormat));
+        // }
 
         $interval(function () {
-          updateTime()
-          // update DOM
+        // update DOM
+        updateClock()
+        // updateDate()
         }, 1000)
 
       }

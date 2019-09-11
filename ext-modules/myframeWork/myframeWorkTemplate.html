@@ -25,15 +25,20 @@
       <!--RIGHT SIDE-->
 
       <div class="myframework-right-side-controls col-sm-6">
-        <div ng-controller="displayCtrl as ctrl">
+        <div>
           <button class="btn btn-primary" ng-click="ctrl.test1()">Test1</button>
           <button class="btn btn-success" ng-click="ctrl.test2()">Test2</button>
           <button class="btn btn-warning" ng-click="ctrl.test3()">Test3</button>
+          <div style="float:right">
+            <myframe-clock-dir>
 
-          <div ng-controller="assistantCtrl" ng-model="format" class="myframework-clock-module">
-            <div assistant-clock-dir="formatClock"></div>
-            <div style="margin-top: -25px;" assistant-clock-dir="formatDate"> </div>
+            </myframe-clock-dir>
           </div>
+          <!-- <div ng-controller="assistantCtrl as ctrl" 
+              ng-model="format" 
+              class="myframework-clock-module">
+            <div assistant-clock-dir> </div>
+          </div> -->
 
           <!--CLOCK MODULE-->
 
