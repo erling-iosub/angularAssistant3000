@@ -30,5 +30,8 @@
     "request": "^2.88.0",
     "sequelize": "^5.18.1",
     "unirest": "^0.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
   }
 }

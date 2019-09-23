@@ -12,9 +12,9 @@ assistant.directive('assistantDashboardDir',
         scope.gridsterOpts = {
           columns: 12,
           margins: [20,20],
-          outerMargin: false,
+          outerMargin: true,
           pushing: true,
-          floating: true, 
+          floating: false, 
           swapping: false,
         },
 

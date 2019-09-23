@@ -29,12 +29,12 @@ class assistantCtrl{
         this.weather = res;
         this.storeDataService.writeWeatherData('weather',  this.weather);
         this.storeDataService.setTimer('lastUpdate', this.lastUpdate)
-        //console.log('this.weather API',this.weather)
+        console.log('this.weather API',this.weather)
         this.$scope.$apply()
         return this.weather ; 
       })  
     } else {
-      //console.log('this.weather StoreData',this.weather)
+      console.log('this.weather StoreData',this.weather)
       return this.weather = this.storeDataService.readWeatherData('weather')
     }
   }
@@ -46,6 +46,7 @@ class assistantCtrl{
         this.lastUpdate = currentTime;
         this.money = res;
         this.storeDataService.writeMoneyData('money', this.money)  
+        //console.log('money app', this.money)
         return this.money; 
       })
     } else {
@@ -62,11 +63,12 @@ class assistantCtrl{
 
   test2(){
     // console.log('call money api')
-    this.callMoneyApi() 
+    this.callMoneyApi()
+    console.log(this.money)
   }
 
   test3(){
-    // console.log(this.something)
+    console.log(this.something)
     this.something = !this.something
     }
 }

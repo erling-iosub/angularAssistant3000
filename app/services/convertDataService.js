@@ -32,7 +32,7 @@ assistant.factory(`convertDataService`,
       }
       
     var convertTime = function(){
-      console.log("aici",getDataService.getTime())
+      // console.log("aici",getDataService.getTime())
         return getDataService.getTime().split(":")[0] + ":" + getDataService.getTime().split(":")[1];
       }
     
